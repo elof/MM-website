@@ -18,10 +18,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-helmet`,
       options: {
-        pathPrefix: `/blog`,
         proxy: {
-          prefix: "/blog",
-          url: "https://www.123colorwithme.com/blog",
+          prefix: "/blog/",
+          url: "https://www.123colorwithme.com/",
         },
       },
     },
