@@ -16,6 +16,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-react-helmet`,
+      options: {
+        pathPrefix: `/blog`,
+        proxy: {
+          prefix: "/blog",
+          url: "https://www.123colorwithme.com/blog",
+        },
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [{
@@ -44,8 +54,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Macrometa blog`,
+        short_name: `Macrometa`,
         start_url: `/blog/`,
         background_color: `#fff`,
         theme_color: `#381696`,
