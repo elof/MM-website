@@ -16,14 +16,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-react-helmet`,
+      resolve: `http-proxy-middleware`,
       options: {
-        pathPrefix: `/blog/`,
-        proxy: {
-          prefix: "/blog/",
-          url: "https://www.123colorwithme.com/blog/",
-        },
-      },
+      pathRewrite: {'^/' : '/blog/'},
     },
     {
       resolve: `gatsby-transformer-remark`,
