@@ -5,6 +5,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
 
+  const config = {
+      ...baseConfig,
+      ...{
+        output: {
+          ...baseConfig.output,
+          publicPath: '/blog/',
+        },
+      },
+    };
+
+
   const result = await graphql(`
     {
       allMarkdownRemark(
