@@ -16,9 +16,14 @@ module.exports = {
       },
     },
     {
-      resolve: `http-proxy-middleware`,
+      resolve: `gatsby-plugin-react-helmet`,
       options: {
-      pathRewrite: {'^/' : '/blog/'},
+          plugins:[{
+            resolve: `http-proxy-middleware`,
+            options: {
+            pathRewrite: `^/` : `/blog/`,
+        }],
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
