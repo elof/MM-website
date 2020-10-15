@@ -31,7 +31,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/W3Layouts/gatsby-starter-delog#readme",
+  "homepage": "/blog/",
   "keywords": [
     "gatsby",
     "netlify cms"
@@ -41,11 +41,11 @@
     "url": "git+https://github.com/W3Layouts/gatsby-starter-delog.git"
   },
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages --prefix-paths",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve --prefix-paths",
+    "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
