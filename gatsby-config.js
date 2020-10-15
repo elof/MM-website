@@ -7,22 +7,13 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: require("./site-meta-data.json"),
+  pathPrefix: `/blog/`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
         path: `${__dirname}/_data`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-react-helmet`,
-      options: {
-          plugins:[{
-            resolve: `http-proxy-middleware`,
-            options: {
-            pathRewrite: `^/` : `/blog/`,
-        }],
       },
     },
     {
@@ -64,7 +55,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    // `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-dark-mode',
     // siteURL is a must for sitemap generation
