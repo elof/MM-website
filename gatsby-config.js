@@ -3,9 +3,21 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const proxy = require("http-proxy-middleware")
 
 module.exports = {
   /* Your site config here */
+  developMiddleware: app => {
+    app.use(
+      "/blog",
+      proxy({
+        target: "https://123colorwithme.com",
+        pathRewrite: {
+          "/blog/": "",
+        }
+      })
+    )
+  },
   siteMetadata: require("./site-meta-data.json"),
   pathPrefix: `/blog/`,
   plugins: [
