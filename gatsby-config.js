@@ -19,6 +19,7 @@ module.exports = {
     )
   },
   siteMetadata: require("./site-meta-data.json"),
+  pathPrefix: `/blog/`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
