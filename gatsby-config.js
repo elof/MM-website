@@ -18,7 +18,7 @@ module.exports = {
     )
   },
   siteMetadata: require("./site-meta-data.json"),
-  pathPrefix: `/blog/`,
+  assetPrefix: `/blog/`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
