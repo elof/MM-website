@@ -9,7 +9,7 @@ module.exports = {
   /* Your site config here */
   developMiddleware: app => {
     app.use(
-      "/blog",
+      "/blog/",
       proxy({
         target: "https://123colorwithme.com",
         pathRewrite: {
